@@ -12,7 +12,7 @@ namespace Diego_Giaccone
         public string _nombre { get; set; }
         public string _apellido { get; set; }
         public string _nombreUsuario { get; set; }
-        public string _contraseña { get; set; }
+        public string _pass { get; set; }
         public string _mail { get; set; }
     }
 }
