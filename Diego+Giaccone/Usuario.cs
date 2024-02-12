@@ -9,7 +9,7 @@ namespace Diego_Giaccone
 {
     public static class UsuarioData
     {
-        private static string connectionString = "";
+        private static string connectionString = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;";
 
         public static Usuario ObtenerUsuario(int idUsuario)
         {
