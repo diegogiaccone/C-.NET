@@ -9,7 +9,7 @@ namespace Diego_Giaccone
 {
     public static class ProductoData
     {
-        private static string connectionString = "";
+        private static string connectionString = @"Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;";
 
         public static Producto ObtenerProducto(int idProducto)
         {
