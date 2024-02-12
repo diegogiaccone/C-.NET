@@ -144,3 +144,11 @@ namespace Diego_Giaccone
     }
 }
 
+CREATE TABLE Ventas
+(
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    FechaVenta DATETIME NOT NULL,
+    IdUsuario INT NOT NULL,
+    FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id)
+);
+
