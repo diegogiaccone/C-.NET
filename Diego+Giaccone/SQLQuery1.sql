@@ -17,6 +17,14 @@ CREATE TABLE Productos
     FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id)
 );
 
+CREATE TABLE Ventas
+(
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    FechaVenta DATETIME NOT NULL,
+    IdUsuario INT NOT NULL,
+    FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id)
+);
+
 CREATE TABLE ProductosVendidos
 (
     Id INT PRIMARY KEY IDENTITY(1,1),
@@ -26,12 +34,4 @@ CREATE TABLE ProductosVendidos
     PrecioVenta DECIMAL(18, 2) NOT NULL,
     FOREIGN KEY (IdVenta) REFERENCES Ventas(Id),
     FOREIGN KEY (IdProducto) REFERENCES Productos(Id)
-);
-
-CREATE TABLE Ventas
-(
-    Id INT PRIMARY KEY IDENTITY(1,1),
-    FechaVenta DATETIME NOT NULL,
-    IdUsuario INT NOT NULL,
-    FOREIGN KEY (IdUsuario) REFERENCES Usuarios(Id)
 );
